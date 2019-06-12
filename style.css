@@ -50,13 +50,159 @@ img {
 
 /** HEADER CSS **/
 
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.top-nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    background-color: #16162d;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+li {
+    margin: 0 2rem;
+}
+
+.nav-link {
+    font-family: 'The Historia Demo', sans-serif;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: linear-gradient(to top, #ffe838, #fd57bf);
+
+}
+
+.top-nav.open {
+    top: 0;
+    border-radius: initial;
+}
+
+
+.menu-toggler {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+
+}
+
+.menu-toggler.open {
+    transform: rotate(-45deg);
+}
+
+.landing-text h1 {
+    font-size: 20rem;
+    font-family: 'The Historian Demo', sans-serif;
+    padding: 1rem;
+
+}
+
+.landing-text h6 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
 /** LANDING ANIMATION CSS **/
 
-/** LANDING ANIMATION CSS SLUT **/
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/** LANDING ANIMATION CSS SLUT**/
 
 /** HEADER CSS SLUT **/
 
 /** CV CSS **/
+
+.cv .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-top {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    margin-bottom: 6rem;
+    margin-top: 10rem;
+}
+
+.cv-top {
+    font-size: 10rem;
+    opacity: .3;
+}
+
+.cv-top h1 {
+    color: rgba(0, 0, 0, 0.39);
+}
+
+.cv-top h6 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.profil-img {
+    flex: 1;
+    margin-right: 5rem;
+
+}
+
+.cv-detaljer {
+    flex: 1;
+}
+
+.socialmedia {
+    margin-top: 5rem;
+}
+
+.socialmedia a {
+    font-size: 5rem;
+    transition: color 650ms;
+}
 
 /** CV CSS SLUT **/
 
