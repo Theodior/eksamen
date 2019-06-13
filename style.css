@@ -22,7 +22,7 @@ body .landing {
 
 a {
     text-decoration: none;
-    color: #eee;
+    color: #000000;
 }
 
 p {
@@ -47,6 +47,102 @@ img {
 }
 
 /** GENANVENDLIG CSS SLUT **/
+
+/** BURGERMENU CSS **/
+
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/*burger menu*/
+#menu .hidden {
+    display: none;
+    transform: scale(0);
+    transform: translateX(-100%);
+    opacity: 0;
+
+}
+
+#menuknap {
+    display: flex;
+    display: inline-block;
+    left: 75vw;
+
+}
+
+#menu {
+    list-style-type: none;
+    transition: transform .3s;
+    transform-origin: top right;
+}
+
+.burgermenu {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    justify-content: flex-end;
+    margin: 1vw 4vw;
+}
+
+@media only screen and (min-width: 700px) {
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+}
+
+/*************************************top menu**************************/
+.topnav {
+    background-color: rgba(203, 2, 195, 0.28);
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    font-family: 'Questrial', sans-serif;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    justify-content: center;
+    display: flex;
+}
+
+.topnav a:hover {
+    background-color: rgb(10, 0, 255);
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .topnav {
+        display: none;
+    }
+}
+
+/** BURGERMENU CSS SLUT **/
 
 /** HEADER CSS **/
 
@@ -133,21 +229,21 @@ li {
 
 .pulse {
     animation-name: pulse_kf;
-    animation-duration: 3.5s;
+    animation-duration: 5.5s;
     animation-iteration-count: infinite;
 }
 
 @keyframes pulse_kf {
     0% {
-        transform: scale(1, 1);
+        transform: scale(0.8, 0.8);
     }
 
     50% {
-        transform: scale(1.2, 1.2);
+        transform: scale(1, 1);
     }
 
     100% {
-        transform: scale(1, 1);
+        transform: scale(0.8, 0.8);
     }
 }
 
@@ -373,7 +469,7 @@ a {
 
 .box {
     margin: 30px auto;
-    width: 300px;
+    width: 250px;
     height: 490px;
     text-align: center;
     justify-content: space-between;
@@ -439,7 +535,7 @@ a {
     background-position: center;
 }
 
-.five {
+.four {
     background: url('img/nativeapp.png');
     background-repeat: no-repeat;
     background-size: cover;

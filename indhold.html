@@ -10,12 +10,24 @@
 
 <body class="indhold">
     <header>
-        <nav>
-            <a href="indhold.html#spil">Indhold</a>
-            <a href="indhold.html#beskrivelse">Beskrivelse</a>
-            <a href="index.html">Portfolio</a>
-
-        </nav>
+        <div class="topnav">
+            <nav>
+                <a href="index.html">FORSIDE</a>
+                <a href="indhold.html#spil">REDESIGN</a>
+                <a href="indhold.html#beskrivelse">BESKRIVELSE</a>
+            </nav>
+        </div>
+        <!--burger menu-->
+        <div class="burgermenu">
+            <nav>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">FORSIDE</a></li>
+                    <a href="indhold.html#spil">REDESIGN</a>
+                    <a href="indhold.html#beskrivelse">BESKRIVELSE</a>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="redesign">
@@ -42,4 +54,6 @@
     </section>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>

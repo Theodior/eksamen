@@ -10,12 +10,24 @@
 
 <body class="animation">
     <header>
-        <nav>
-            <a href="animation.html#spil">Spil</a>
-            <a href="animation.html#beskrivelse">Beskrivelse</a>
-            <a href="index.html">Portfolio</a>
-
-        </nav>
+        <div class="topnav">
+            <nav>
+                <a href="index.html">FORSIDE</a>
+                <a href="animation.html#spil">SPIL</a>
+                <a href="animation.html#beskrivelse">BESKRIVELSE</a>
+            </nav>
+        </div>
+        <!--burger menu-->
+        <div class="burgermenu">
+            <nav>
+                <div id="menuknap">☰</div>
+                <ul id="menu" class="hidden">
+                    <li><a href="index.html">FORSIDE</a></li>
+                    <a href="animation.html#spil">SPIL</a>
+                    <a href="animation.html#beskrivelse">BESKRIVELSE</a>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="spil">
@@ -42,4 +54,6 @@
     </section>
 
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
