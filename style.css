@@ -71,6 +71,7 @@ img {
     display: flex;
     display: inline-block;
     left: 75vw;
+    font-size: 2rem;
 
 }
 
@@ -106,7 +107,7 @@ img {
 
 /*************************************top menu**************************/
 .topnav {
-    background-color: rgba(203, 2, 195, 0.28);
+    background-color: rgba(2, 10, 203, 0.11);
     overflow: hidden;
     justify-content: center;
     display: flex;
@@ -273,7 +274,7 @@ li {
 }
 
 .cv-top h1 {
-    color: rgba(0, 0, 0, 0.39);
+    color: rgba(11, 11, 11, 0.37);
 }
 
 .cv-top h6 {
@@ -318,7 +319,7 @@ li {
 }
 
 .tidl-top h1 {
-    color: rgba(0, 0, 0, 0.39);
+    color: rgba(11, 11, 11, 0.37);
 }
 
 .tidl-arbejde .container {
@@ -449,10 +450,11 @@ li {
 .port-top h6 {
     font-size: 2rem;
     font-weight: 300;
+
 }
 
 .port-top h1 {
-    color: rgba(0, 0, 0, 0.39);
+    color: rgba(11, 11, 11, 0.37);
 }
 
 a {
