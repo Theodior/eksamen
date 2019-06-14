@@ -183,18 +183,6 @@ li {
     margin: 0 2rem;
 }
 
-.nav-link {
-    font-family: 'The Historia Demo', sans-serif;
-    font-size: 5rem;
-    padding: 1rem;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-    background: linear-gradient(to top, #ffe838, #fd57bf);
-
-}
-
 .top-nav.open {
     top: 0;
     border-radius: initial;
@@ -590,8 +578,9 @@ a {
     text-align: center;
     background-color: white;
     padding: 2rem 0;
-    position: relative;
+    position: fixed;
     margin-top: 10rem;
+    bottom: -10px;
 
 
 }
