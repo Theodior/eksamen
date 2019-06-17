@@ -51,6 +51,7 @@ body .landing {
 a {
     /*none: ingen linje er tegnet, og enhver eksisterende dekoration fjernes.*/
     text-decoration: none;
+    font-size: 2rem;
 
     /*farve på a-tags*/
     color: #000000;
