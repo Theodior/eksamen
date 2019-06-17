@@ -1,3 +1,10 @@
+/* Hvordan en css ser ud.
+selector {
+    egenskab1: værdi;
+    egenskab2: værdi;
+}*/
+
+
 /** OVERODNET CSS **/
 
 
@@ -354,9 +361,11 @@ li {
 /** JEG HAR TAGET KODE FRA https://codepen.io/abhishek747/pen/BbWKVa?fbclid=IwAR0fZBxi1erWKaIyIX5naSEuw6oHsIzrX-loYFS3gY98DukFVMviFdyHhbQ HOVER CARDS**/
 
 .cards-list {
+    /*Z-index angiver stakkenes rækkefølge for et element. Et element med større stakordre er altid foran et element med en lavere stakordre.*/
     z-index: 0;
     width: 100%;
     display: flex;
+    /*Content er placeret med mellemrum mellem linjerne*/
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -365,18 +374,23 @@ li {
     margin: 30px auto;
     width: 300px;
     height: 300px;
+    /*Laver runde kanter*/
     border-radius: 40px;
 
-    /*top, right, bottom & left*/
+    /*top, right, bottom & left angiver skygge på boxene*/
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     cursor: pointer;
+    /*Hvor hurtig skal man zoom*/
     transition: 0.4s;
 
 }
 
 .card .card_image {
+
+    /*height/width: inherit vil, som navnet antyder, arve værdien fra den parent. Hvis parents værdi er height/width: 50%, så vil child også være 50% af height/width af parent.*/
     width: inherit;
     height: inherit;
+    /*Billedet skal fylde boksen med runde kanter*/
     border-radius: 40px;
 }
 
@@ -387,29 +401,16 @@ li {
     object-fit: cover;
 }
 
-.card .card_title {
-    text-align: center;
-    border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: -80px;
-    height: 40px;
-}
 
 .card:hover {
+    /*Når man hover over cards zoomer de ind*/
     transform: scale(0.9, 0.9);
+    /*Skyggerne skal følge med*/
     box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
         -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 
-.title-white {
-    color: white;
-}
 
-.title-black {
-    color: black;
-}
 
 @media all and (max-width: 500px) {
     .card-list {
@@ -623,6 +624,8 @@ a {
 }
 
 /** FOOTER ANIMATION CSS **/
+
+/*Animationen vokser i farve fra 0% -> 70% -> 100%*/
 
 @keyframes beating {
     0% {
