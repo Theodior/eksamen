@@ -1,41 +1,63 @@
 /** OVERODNET CSS **/
 
+
+/* (*) er universalvælgeren; det matcher ethvert element. Så dit eksempel vil anvende stilreglen til hvert element.*/
 * {
+    /*MARGIN er den YDRE afstand fra rammens kant til en anden ramme/ element.*/
     margin: 0;
+    /*PADDING er den INDRE afstand i en ramme, og kan billedligt sammenlignes med et passepartout i en billedramme.*/
     padding: 0;
+    /*Den box-sizing egenskab giver os mulighed for at inkludere padding og border i et elements samlede width og height. Hvis du indstiller box-sizing: border-box; På et element padding og border er inkluderet i width og height: Begge div'er er i samme størrelse nu*/
     box-sizing: border-box;
 }
 
 html {
-    font-size: 10px;
+    /*Remenheden er i forhold til rod- eller html-elementet. Det betyder, at vi kan definere en enkelt skriftstørrelse på html-elementet og definere alle remenheder for at være en procentdel af det.*/
+    font-size: 0.625rem;
+    /*Bestemer fonten*/
     font-family: 'Roboto', sans-serif;
+    /*Bestemmer farven på fonten*/
     color: black;
 }
 
 body .landing {
+    /*Når du giver et element med en width/height på 100% i CSS, siger du stort set "Gør dette elements indholdsområde nøjagtigt det samme som dennes eksplicit bredde - men kun hvis dets forælder har en eksplicit bredde."*/
     width: 100%;
     height: 100%;
-    /*    background: url(img/sitebg.jpg) no-repeat center fixed;*/
+    /*Ændre størrelsen på baggrundsbilledet for at dække hele containeren, selvom det skal strække billedet eller skære lidt af en af kanterne*/
     background-size: cover;
+    /*Gør baggrunden til siden hvid*/
     background-color: white;
     margin: 0;
     padding: 0;
+    /*Flex-containeren bliver fleksibel ved at indstille display til flex:*/
     display: flex;
+    /*content bliver positioneret i midten af containeren*/
     justify-content: center;
+    /*content bliver positioneret i midten af containeren*/
     align-items: center;
+    /*Viewport Højde (vh) - En procentdel af den fulde visningshøjde. 100vh vil løse til 100% af den aktuelle visningshøjde.*/
     min-height: 100vh;
 }
 
+/*Styling for alle a-tags*/
 a {
+    /*none: ingen linje er tegnet, og enhver eksisterende dekoration fjernes.*/
     text-decoration: none;
+
+    /*farve på a-tags*/
     color: #000000;
 }
 
+/*indstillinger på p-tags*/
 p {
     font-size: 1.8rem;
+
+    /*Font-weight angiver, hvor tykke eller tynde tegn i tekst skal vises.*/
     font-weight: 300;
 }
 
+/*styling for img-tags*/
 img {
     width: 100%
 }
@@ -49,6 +71,7 @@ img {
     max-width: 120rem;
     height: 100%;
     margin: 0 auto;
+    /*Et element med position: relativ; er placeret i forhold til sin normale position. Indstilling af de top, right, bottom og left egenskaber af et relativt positioneret element vil medføre, at det justeres væk fra dets normale position. Andet indhold vil ikke blive justeret for at passe ind i et mellemrum, der er tilbage af elementet.*/
     position: relative;
 }
 
@@ -61,20 +84,25 @@ img {
 }
 
 .hidden {
+    /*Elementet er helt fjernet - vi skal toggle den i JavaScript*/
     display: none;
 }
 
 /*burger menu*/
 #menu .hidden {
     display: none;
+    /*Scale() -metoden øger eller formindsker størrelsen af et element (ifølge parametrene angivet for width og height).*/
     transform: scale(0);
+    /*For burgermenuen til at komme ind af x-aksen, fra venstre(-)*/
     transform: translateX(-100%);
+    /*Opacity-egenskaben angiver opacitetsniveauet for et element - fulstændig transparent*/
     opacity: 0;
 
 }
 
 #menuknap {
     display: flex;
+    /*display: inline-block er at vise listeobjekter vandret i stedet for vertikalt. I det følgende eksempel oprettes vandrette navigationslinks:*/
     display: inline-block;
     left: 75vw;
     font-size: 3rem;
@@ -82,8 +110,11 @@ img {
 }
 
 #menu {
+    /*Ingen markør vises*/
     list-style-type: none;
+    /*hvor hurtig burgermenuen skal blive til X*/
     transition: transform .3s;
+    /*Hvor burgermenuen skal placeres*/
     transform-origin: top right;
 }
 
@@ -94,6 +125,8 @@ img {
     justify-content: flex-end;
     margin: 1vw 4vw;
 }
+
+/*Når skærmen bliver mindre end 700px, blivr det til en burgermenu, ellers er det bare en reel menu.*/
 
 @media only screen and (min-width: 700px) {
 
@@ -114,6 +147,8 @@ img {
 /*************************************top menu**************************/
 .topnav {
     background-color: rgba(237, 237, 237, 0.37);
+
+    /*Overflow er klippet, og resten af indholdet vil være usynligt*/
     overflow: hidden;
     justify-content: center;
     display: flex;
@@ -122,6 +157,7 @@ img {
 /* Style the links inside the navigation bar */
 .topnav a {
     font-family: 'Questrial', sans-serif;
+    /*Float kan have en af følgende værdier: left - elementet flyder til venstre for sin container*/
     float: left;
     color: #000000;
     text-align: center;
@@ -142,7 +178,7 @@ img {
     color: white;
 }
 
-
+/*Når skærmen er større end 700px, bliver det til en almindelig menu*/
 @media only screen and (max-width: 700px) {
     .topnav {
         display: none;
@@ -153,20 +189,10 @@ img {
 
 /** HEADER CSS **/
 
+/*landingteksten*/
 header .landing {
     width: 100%;
     height: 100vh;
-}
-
-.top-nav {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: -100vh;
-    background-color: #16162d;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
-    transition: all 650ms cubic-bezier(1, 0, 0, 1);
 }
 
 .nav-list {
@@ -180,32 +206,8 @@ header .landing {
 }
 
 li {
+    /*top, right, bottom & left - så der er 2rem på left margin*/
     margin: 0 2rem;
-}
-
-.top-nav.open {
-    top: 0;
-    border-radius: initial;
-}
-
-
-.menu-toggler {
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    width: 5rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1500;
-    transition: transform 650ms ease-out;
-
-}
-
-.menu-toggler.open {
-    transform: rotate(-45deg);
 }
 
 .landing-text h1 {
@@ -223,11 +225,18 @@ li {
 /** LANDING ANIMATION CSS **/
 
 .pulse {
+    /*Kalder navnet på animation i CSS*/
     animation-name: pulse_kf;
+
+    /*Hvor hurtig den skal køre*/
     animation-duration: 5.5s;
+
+    /*Hvor mange gange den skal lave animationen.*/
     animation-iteration-count: infinite;
 }
 
+/*øger eller formindsker størrelsen af et element (ifølge parametrene angivet for width og height) så den pulser fra
+0.8 -> 1 -> 0.8*/
 @keyframes pulse_kf {
     0% {
         transform: scale(0.8, 0.8);
@@ -319,7 +328,6 @@ li {
 }
 
 .tidl-arbejde .container {
-    /*    display: flex;*/
     align-items: center;
     justify-content: center;
 }
@@ -358,6 +366,8 @@ li {
     width: 300px;
     height: 300px;
     border-radius: 40px;
+
+    /*top, right, bottom & left*/
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     cursor: pointer;
     transition: 0.4s;
