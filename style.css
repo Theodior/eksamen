@@ -19,7 +19,7 @@ selector {
 }
 
 html {
-    /*Remenheden er i forhold til rod- eller html-elementet. Det betyder, at vi kan definere en enkelt skriftstørrelse på html-elementet og definere alle remenheder for at være en procentdel af det.*/
+    /*Rem-enheden er i forhold til rod- eller html-elementet. Det betyder, at vi kan definere en enkelt skriftstørrelse på html-elementet og definere alle remenheder for at være en procentdel af det.*/
     font-size: 0.625rem;
     /*Bestemer fonten*/
     font-family: 'Roboto', sans-serif;
@@ -31,7 +31,7 @@ body .landing {
     /*Når du giver et element med en width/height på 100% i CSS, siger du stort set "Gør dette elements indholdsområde nøjagtigt det samme som dennes eksplicit bredde - men kun hvis dets forælder har en eksplicit bredde."*/
     width: 100%;
     height: 100%;
-    /*Ændre størrelsen på baggrundsbilledet for at dække hele containeren, selvom det skal strække billedet eller skære lidt af en af kanterne*/
+    /*Ændrer størrelsen på baggrundsbilledet for at dække hele containeren, selvom det skal strække billedet eller skære lidt af en af kanterne*/
     background-size: cover;
     /*Gør baggrunden til siden hvid*/
     background-color: white;
