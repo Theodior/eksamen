@@ -514,6 +514,8 @@ a {
     width: 130px;
     height: 130px;
     margin: 120px auto;
+
+    /*Relativ positionering: hjælper dig med stilelementer i forhold til andre elementer. F.eks. du vil flytte et input til højre i forhold til div det er inde.*/
     position: relative;
     border-radius: 100px;
     bottom: 20px;
