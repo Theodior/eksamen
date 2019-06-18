@@ -601,6 +601,7 @@ a {
 }
 
 .up {
+    /*position: absolut; Et element med position: absolut; er placeret i forhold til nærmeste placerede forfader (i stedet for placeret i forhold til visningsporten, som fast). Imidlertid; Hvis et absolut positioneret element ikke har nogen positionerede forfædre, bruger det dokumentets krop og bevæger sig sammen med siderulle.*/
     position: absolute;
     width: 5rem;
     height: 5rem;
