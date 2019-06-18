@@ -492,6 +492,7 @@ a {
 }
 
 .box:hover {
+    /*Gør at box falder med -10px og skyggen følger med*/
     margin-bottom: -10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
@@ -590,6 +591,8 @@ a {
     text-align: center;
     background-color: white;
     padding: 2rem 0;
+
+    /*Gør at footer er fastlåst på siden, og man hele tiden kan se den*/
     position: fixed;
     margin-top: 10rem;
     bottom: -10px;
