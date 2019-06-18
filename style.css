@@ -210,19 +210,11 @@ header .landing {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 li {
     /*top, right, bottom & left - så der er 2rem på left margin*/
     margin: 0 2rem;
-}
-
-.landing-text h1 {
-    font-size: 20rem;
-    font-family: 'The Historian Demo', sans-serif;
-    padding: 1rem;
-
 }
 
 .landing-text h6 {
